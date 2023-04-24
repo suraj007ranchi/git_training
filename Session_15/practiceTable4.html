@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 5px;
+      }
+      table,
+      th,
+      td {
+        border: 1px solid black;
+        text-align: center;
+        border-collapse: collapse;
+      }
+    </style>
+    <script>
+      function handleAdd() {
+        let name = document.createElement("td");
+        name.innerText = document.getElementById("name").value;
+
+        let rollNo = document.createElement("td");
+        rollNo.innerText = document.getElementById("number").value;
+
+        let age = document.createElement("td");
+        age.innerText = document.getElementById("age").value;
+
+        let address = document.createElement("td");
+        address.innerText = document.getElementById("address").value;
+
+        let row = document.createElement("tr");
+        row.appendChild(name);
+        row.appendChild(rollNo);
+        row.appendChild(age);
+        row.appendChild(address);
+
+        let table = document.getElementById("table");
+        table.appendChild(row);
+
+        document.getElementById("name").value = "";
+        document.getElementById("number").value = "";
+        document.getElementById("age").value = "";
+        document.getElementById("address").value = "";
+      }
+
+      function DataTransfer(){
+        let data1 = getSelection("table1".indexOf(0))
+        let data2 = document.getSelection("table1".indexOf(1));
+        
+        
+
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Student Form</h1>
+    <hr />
+    <label for="name">Name: </label>
+    <input type="text" id="name" placeholder="Enter a name" /><br />
+    <label for="number">Number: </label>
+    <input type="number" id="number" placeholder="Enter your Roll No" /><br />
+    <label for="age">Age: </label>
+    <input type="number" id="age" placeholder="Enter your age" /><br />
+    <label for="address">Address: </label>
+    <input type="text" id="address" placeholder="Ente your address" />
+    <button onclick="handleAdd()">Add</button><br />
+
+    <table id="table1" width="50%">
+      <tr>
+        <th>Name</th>
+        <th>Roll No</th>
+        <th>Age</th>
+        <th>Address</th>
+      </tr>
+      <tr>
+        <td>Suraj</td>
+        <td>01</td>
+        <td>25</td>
+        <td>Ranchi</td>
+      </tr>
+      <tr>
+        <td>Aashish</td>
+        <td>02</td>
+        <td>25</td>
+        <td>Ranchi</td>
+      </tr>
+    </table>
+    <table id="table2">
+        <tr>
+            <th>Name</th>
+            <th>Roll No</th>
+            <th>Age</th>
+            <th>Address</th>
+        </tr>
+        <tr>
+            <td>Kunal</td>
+            <td>03</td>
+            <td>25</td>
+            <td>Ranchi</td>
+          </tr>
+    </table>
+    <label for="rowNo">Enter row no</label>
+    <button id="btn1" onclick="DataTransfer()">Transfer Data</button>
+  </body>
+</html>

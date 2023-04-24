@@ -1,0 +1,25 @@
+<html>
+  <head>
+    <title>App</title>
+  </head>
+<script>
+    const handleChange = ()=>{
+        let page = document.getElementById("select").value
+        fetch("https://reqres.in/api/users?page="+page)
+        .then(data=>data.json())
+        .then(data=>document.getElementById("output").innerHTML=JSON.stringify(data))
+    }
+</script>
+  <body>
+    <select onchange="handleChange()" id="select">
+      <option value="1">page1</option>
+      <option value="2">page2</option>
+      <option value="3">page3</option>
+      <option value="4">page4</option>
+      <option value="5">page5</option>
+      <option value="6">page6</option>
+    </select>
+    <br/>
+    <p id="output"></p>
+  </body>
+</html>

@@ -1,0 +1,62 @@
+Data exposed as a URL is known as "Web Service"(Restful Webservices).
+
+How to create Restful Webservice, we will learn in backend sessions. 
+
+Today we will learn how to consume a webservice.
+JavaScript provides methods() using which we can consume a webservice.
+All these methods() follow particular pattern in which we wait for the data
+to come once we make a call.
+General syntax of methods are as follows.:
+Syntax : 
+	fetch("url")
+	.then(data) 	// we can transform the data till the very last end
+	.then(data)	
+
+We can imagine the above process as stages in factory.
+
+keydown: Keydown happens when the key is pressed down, and auto repeats if the key is pressed down for long.
+
+keypress: This event is fired when an alphabetic, numeric, or punctuation key is pressed down.
+
+keyup: Keyup happens when the key is released.
+
+Onchange() event gets called when we come out.
+
+JavaScript DOM provides addEventListener() functions which can be used to 
+establish a relationship b/w event and element.
+Example :
+document.getElementById("demo").addEventListener("keydown", myFunction);    // 1st part is event and 2nd part is funtion we want to call
+
+addEventLister() can be added to the intire document or even to individual
+elements.
+If we want common listener to intire page.
+	
+Mouse Events are following :- 
+1. onclick	The user clicks on an element
+2. oncontextmenu	The user right-clicks on an element
+3. ondblclick	The user double-clicks on an element
+4. onmousedown	A mouse button is pressed over an element
+5. onmouseenter	The pointer is moved onto an element (called on 1st click only even after switching bw elements)
+6. onmouseleave	The pointer is moved out of an element
+7. onmousemove	The pointer is moving over an element
+8. onmouseout	The mouse pointer moves out of an element
+9. onmouseover	The mouse pointer is moved over an element (called when click on 1st element but called again when we switch cliking on another element)
+10. onmouseup	The mouse button is released over an element
+
+
+Arrow funtion Provides an easy way of creating functions. Syntax of arrow function looks like this : - 
+var  = (parameters) => {
+
+}
+
+Arrow funtion
+
+Few Notes : -
+1. To denote an empty parameter we have to pass () bracket.
+2. If there is a single parameter , no need of () bracket.
+3. If there is only one statement within the function then no need of {} brackets.
+
+
+
+
+

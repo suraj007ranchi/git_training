@@ -1,0 +1,22 @@
+To make a copy of object in JavaScript, it provide two ways :-
+1. Using Object.assign : it has 3 parts :- 
+                                    1. target object represented by {} 
+                                    2. Source object from which we want to copy
+                                    3. Changes on new properties which needs to be added in target.
+2. Using Spread Operator (...)
+
+Currying : Currying is an advanced technique of working with functions. It’s used not only in JavaScript,
+           but in other languages as well.
+           Currying is a transformation of functions that translates a function from callable as f(a, b, c) into 
+           callable as f(a)(b)(c).
+
+In JavaScript We can pass function as an argument and we can return a function also as a result.
+
+Partial function : They are nearly same as curry functions with the difference that the Partial function can take
+                   any no of args while in case of curry we take only one argument.
+        Example :
+        const add = x => (y, z) => x + y + z;   <Partial>
+
+        const add = x => y => z => x + y + z;   <curry>
+
+Q1. Create a calculator and implement same by using Partial and Curry function.

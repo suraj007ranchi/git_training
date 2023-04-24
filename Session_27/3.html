@@ -1,0 +1,26 @@
+<html>
+  <head>
+    <title>Sample</title>
+  </head>
+  <body>
+    <script>
+      var dataArray = [];
+      const createSelect = (data) => {
+        let select = document.createElement("select");
+        for (let i = 0; i < data.length; i++) {
+          let option = document.createElement("option");
+          option.value = data[i].email;
+          option.innerHTML =data[i].email
+          select.appendChild(option);
+        }
+        document.getElementById("input").appendChild(select);
+      };
+
+      fetch("https://reqres.in/api/users?page=2")
+        .then((data) => data.json())
+        .then((data) => createSelect(data.data));
+    </script>
+    <p id="input"></p>
+    <p id="output"></p>
+  </body>
+</html>

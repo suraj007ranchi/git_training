@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        class Shape{
+            constructor(name,color){
+                this.name = name
+                this.color = color
+            }
+            display(){
+                console.log("name is",this.name,"color is",this.color)
+            }
+        }
+        class Circle extends Shape{
+            constructor(radius,color){
+                super("Circle",color)
+                this.radius = radius
+            }
+
+            area(){
+                console.log("area =",3.14*this.radius*this.radius)
+            }
+
+            display(){
+                super.display()     // same function when created in parent and child is known as function overriding.
+                console.log("radius of given circle is",this.radius)
+            }
+        }
+        class Rectangle extends Shape{
+            constructor(length,width,color){
+                super("Rectangle",color)
+                this.length = length
+                this.width = width
+            }
+            area(){
+                console.log("area of rectangel",this.length*this.width)
+            }
+            display(){
+                super.display()     // calling the base class
+                console.log(this.length,this.width)
+            }
+        }
+        // Multi level Inhertance
+        class Square extends Rectangle{
+            constructor(side,color){
+                super(side,side,color)
+            }
+        }
+
+        let c1 = new Circle(10,"Red")
+        c1.display()
+        c1.area()
+
+        let s1 = new Square(7,"Blue")
+        s1.display()
+        s1.area()
+
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function handleKeyPress(e){
+            console.log(e)
+            let user2 = document.getElementById("username2").value
+            document.getElementById("username2").value = user2+e.key
+        }
+    </script>
+
+</head>
+<body>
+    <label for="username1"> Username1 </label>
+    <input type="text" id="username1" onkeypress="handleKeyPress(event)"/>
+    <br>
+    <label for="username2"> Username2 </label>
+    <input type="text" id="username2" />
+    <br>
+</body>
+</html>

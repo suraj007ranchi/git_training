@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function handleAdd(){
+            let sname = document.getElementById("name").value
+            let sroll_no = document.getElementById("number").value
+            let sage = document.getElementById("age").value
+            let sadd = document.getElementById("add").value
+
+            document.getElementById("para").innerHTML="  "+sname+"  "+sroll_no+"  "+sage+"  "+"   "+sadd;
+        }
+    </script>
+    <style>
+        .view1{
+            display: table;
+        }
+    </style>
+</head>
+<body>
+
+        <table>
+            <tr>
+                <td><label for="name">Name</label></td>
+                <td><input type="text" id="name" placeholder="enter ur name"></td>
+            </tr>
+            <tr>
+                <td><label for="number">Roll no</label></td>
+                <td><input type="number" id="number" placeholder="enter ur roll_no"></td>
+            </tr>
+            <tr>
+                <td><label for="age">Age</label></td>
+                <td><input type="number" id="age" placeholder="enter ur age"></td>
+            </tr>
+            <tr>
+                <td><label for="address"> Address </label></td>
+                <td><textarea name="add" id="add" cols="30" rows="3"></textarea></td>
+            </tr>
+            <tr>
+                <td rowspan="2"><button id="btn1" type="submit" onclick="handleAdd()">Submit</button></td>
+            </tr>
+            <tr>
+                <td><p id="para"></p></td>
+            </tr>
+    </table>
+    <table id="table1" border="1px">
+        <tr>
+            <th>Name</th>
+            <th>Roll</th>
+            <th>Age</th>
+            <th>Address</th>
+        </tr>
+    </table>
+    
+</body>
+</html>

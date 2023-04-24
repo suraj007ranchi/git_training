@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        let currentDate = new Date();
+        console.log(currentDate)
+        console.log(currentDate.toDateString())
+        console.log(currentDate.toUTCString())
+        console.log(currentDate.toISOString())
+
+        let yesterdayDate = new Date(2013,02,11,6,35,89)
+        console.log(yesterdayDate)
+
+        let date1 = new Date("Jan 1 2023")
+        console.log(date1)
+
+        let date2 = new Date("January 24 2023")
+        console.log(date2)
+
+        console.log("year :",currentDate.getFullYear())
+        console.log("month :",currentDate.getMonth())
+        console.log("day :",currentDate.getDay())
+        console.log("hours :",currentDate.getHours())
+        console.log("minutes :",currentDate.getMinutes())
+        console.log("seconds :",currentDate.getSeconds())
+        console.log("miliseconds :",currentDate.getMilliseconds())
+
+        console.log("UTC year :",currentDate.getUTCHours())
+
+        console.log(currentDate.toDateString("en-us",{weekday:"long"}))
+
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

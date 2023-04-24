@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script>
+      function createTable(data){
+      let table = document.createElement("table")
+      table.border=1
+      for(let i=0; i < data.length;i++){
+        let tr = document.createElement("tr")
+   
+        let rowdata = data[i]
+        console.log(typeof(rowdata))
+        for(let property in rowdata){
+         let td = document.createElement("td")
+         console.log(typeof(rowdata[property]))
+         td.appendChild(document.createTextNode(""+ rowdata[property]))
+         tr.appendChild(td)
+        }
+        table.appendChild(tr)
+      }
+      document.getElementById("output").appendChild( table)
+     }
+
+      function handleClick() {
+        axios
+          .get("https://reqres.in/api/unknown")
+          //.then((res) => createTable(res));
+          .then((res) => createTable(res.data.data));
+      }
+    </script>
+  </head>
+  <body>
+    <button onclick="handleClick()">Click</button>
+    <p id="output"></p>
+  </body>
+</html>

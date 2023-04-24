@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+    <script>
+      function handleClick() {
+        let userId = document.getElementById("userId").value;
+        let title = document.getElementById("title").value;
+        let body = document.getElementById("body").value;
+        axios
+          .post("https://jsonplaceholder.typicode.com/posts", {
+            userId: parseInt(userId),
+            title: title,
+            body: body,
+          })
+          .then(
+            (res) =>
+              (document.getElementById("output").innerHTML =
+                JSON.stringify(res))
+          );
+      }
+    </script>
+    </head>
+    <body>
+      <label>Enter title <input id="title" /></label>
+      <br />
+      <label>Enter body <input id="body" /></label>
+      <br />
+      <label>Enter userId <input id="userId" type="number" /></label>
+      <br />
+      <button onclick="handleClick()">Send</button>
+      <br />
+      <p id="output"></p>
+    </body>
+  </html>

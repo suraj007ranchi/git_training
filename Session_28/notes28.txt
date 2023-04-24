@@ -1,0 +1,46 @@
+Pure function :
+A function is said to be pure if : 
+1. If it takes argument
+2. It should return result
+3. it should not modify any parameters/input (side effect)
+
+Node JS
+--- JavaScript runner 
+
+Step to create nodeJs project :-
+1. create a folder
+2. go inside the folder using terminal
+3. npm init -y
+
+package.json gets generated 
+package.json used to download depency as per need.
+package.json used to maintain depedency.
+
+Create Sample3 , 
+init it with npm , 
+intall axios,
+create sample.json
+"Wlcm "
+
+React is a JavaScript based UI framework.
+React allows us to develop application which are fast and performance oriented.
+
+DOM
+React VDOM == programs sit on actual DOM
+
+React is a component based system.
+
+UI ----> component1 / component2 
+(these components can be pluges anywhere)
+
+React provides  npx create react app
+
+1) Command to create react--> npx create-react-app sample1
+
+2) Command to run a react app --->npm start
+
+React makes use of JSX
+(JSX stands for Javascript and HTML)
+In react within html wherever we want class we will use className
+
+ npx create-react-app-offline -n sample3

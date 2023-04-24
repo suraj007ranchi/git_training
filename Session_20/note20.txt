@@ -1,0 +1,31 @@
+DOM (Document Object Model)
+
+DOM is predefined objects available in browsers only. Within browsers DOM takes up the responsibility to display in it to
+the user.
+Using DOM objects in javascript we can perform various operation like :-
+    1. creating a new element
+    2. changing the look and feel on some event
+    3. making an element visible/invisible
+
+That is why DOM is very much used in Dynamic HTML.
+We can call it DHTML.
+In DOM the base element is Document.
+Using Document object we can select various elements using predefined methods like FindElementById(), FindElementByName()...
+
+One of the uses of DOM related programming is to capture various HTML events and perform operations on that events.
+Some of the common events are: 
+    1. onclick()
+    2. onchange()
+    3. onFocus()....
+
+Some functions like document.getElementByTagName(), document.getElementByClassName(), returns HTML collection. 
+To use HTML collection we have to first convert HTML collection to array by using Array.from() method.
+
+Q1. Create two input field and a button. Fill the value in the 1st input field and when u click on the button the 
+    value should be copied into 2nd input field...?
+
+Q2. Create form with name,age and roll_no and a button , oncliking the button this data data should be added in a table.
+    The table should have an id="Studenttable"...?
+
+
+

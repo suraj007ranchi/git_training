@@ -1,0 +1,21 @@
+<html>
+  <head>
+    <title>Sample</title>
+  </head>
+  <body>
+    <script>
+      const handleClick = () => {
+        fetch("https://reqres.in/api/users?page=2")
+          .then((data) => data.json())
+          .then(
+            (data) =>
+              (document.getElementById("output").innerHTML =
+                JSON.stringify(data))
+          );
+      };
+    </script>
+
+    <button onclick="handleClick()">Fetch</button>
+    <p id="output"></p>
+  </body>
+</html>

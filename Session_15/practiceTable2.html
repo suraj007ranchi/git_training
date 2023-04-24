@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function handleClick(){
+            let table = document.getElementById("mytable")
+            table.border = "1"
+            let tr = document.createElement("tr")
+            let td1 = document.createElement("td") 
+            let td2 = document.createElement("td")
+            td1.innerHTML = "Hello everybody"
+            td2.innerHTML = "Wlcm in DOM"
+            tr.appendChild(td1)
+            tr.appendChild(td2)
+            table.appendChild(tr)
+            document.body.appendChild(table);
+        }
+    </script>
+</head>
+<body>
+    <table id="mytable"></table>
+    <button onclick="handleClick()">Click</button>
+</body>
+</html>

@@ -1,0 +1,4 @@
+Q1. step1 : create 4 function add,subs,multi,div.  
+    step2 : create a calculator function which can take any
+            the above function as argument to perform the 
+            corresponding function.

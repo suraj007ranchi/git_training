@@ -1,0 +1,4 @@
+Q1. Select color from 1st dropdown that should be reflected in 2nd dropdown..?
+
+Q2. We required a textBox as input where user input his/her name, Radio button is just below that. Radio button should
+    have gender, if user selects male then "Mr" should be prepended, if female is selected then "Miss" should came.

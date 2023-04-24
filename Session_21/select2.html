@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function handleChange(){
+            let color = document.getElementById("drop1").value;
+            document.getElementById("drop2").value = color;
+            
+            document.getElementById("para").style.fontSize = "150px";
+            document.getElementById("s2").innerHTML = "Color Selected "+color;
+
+            console.log(color)
+        }
+    </script>
+</head>
+<body>
+    <label for="first_dropdown"> Select color </label>
+    <select name="drop1" id="drop1" onchange="handleChange()">
+        <option value="white">White</option>
+        <option value="red">Red</option>
+        <option value="blue">Blue</option>
+        <option value="green">Green</option>
+    </select>
+
+    <label for="second_dropdown" id="s2"> Select color </label>
+    <select name="drop2" id="drop2">
+        <option value="white">White</option>
+        <option value="red">Red</option>
+        <option value="blue">Blue</option>
+        <option value="green">Green</option>
+    </select>
+    <p id="para"> para 1</p>
+
+</body>
+</html>

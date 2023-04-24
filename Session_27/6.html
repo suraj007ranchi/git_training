@@ -1,0 +1,46 @@
+<html>
+  <head>
+    <title>App</title>
+  </head>
+<script>
+    function createTable(data){
+      let table = document.createElement("table")
+      table.border=1
+      for(let i=0; i < data.length;i++){
+        let tr = document.createElement("tr")
+   
+        let rowdata = data[i]
+        console.log(typeof(rowdata))
+        for(let property in rowdata){
+         let td = document.createElement("td")
+         console.log(typeof(rowdata[property]))
+         td.appendChild(document.createTextNode(""+ rowdata[property]))
+         tr.appendChild(td)
+        }
+        table.appendChild(tr)
+      }
+      document.getElementById("output").appendChild( table)
+     }
+    const handleChange = ()=>{
+        let page = document.getElementById("select").value
+        fetch("https://reqres.in/api/users?page="+page)
+        .then(data=>data.json())
+        //.then(data=>document.getElementById("output").innerHTML=JSON.stringify(data))
+        .then(data=>createTable(data.data))
+    }
+</script>
+  <body>
+    <select onchange="handleChange()" id="select">
+      <option value="1">page1</option>
+      <option value="2">page2</option>
+      <option value="3">page3</option>
+      <option value="4">page4</option>
+      <option value="5">page5</option>
+      <option value="6">page6</option>
+    </select>
+    <br/>
+    <p id="output"></p>
+   
+  </body>
+</html>
+

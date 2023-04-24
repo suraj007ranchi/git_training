@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function handlClick(){
+            let name = document.getElementById("name").value;
+            let age = document.getElementById("age").value;
+            let roll = document.getElementById("roll").value;
+
+            let table = document.getElementById("mytable")
+            let row1 = document.createElement("tr")
+           
+            let cell1 = document.createElement("td")
+            let cell2 = document.createElement("td")
+            let cell3 = document.createElement("td")
+                cell1.innerText = name
+                cell2.innerText = age
+                cell3.innerText = roll
+                row1.appendChild(cell1)
+                row1.appendChild(cell2)
+                row1.appendChild(cell3)
+                
+            table.appendChild(row1)
+            //document.getElementsByTagName("body")[0].appendChild(table)
+            console.log("done")
+        }
+    </script>
+
+</head>
+<body>
+     Name <input type="text" id="name" />
+     Age <input type="number" id="age" />
+     Roll <input type="number" id="roll" />
+
+    <button onclick="handlClick()"> Creating Table </button>
+    <div id="myid">
+        This  is our div
+    </div>
+    <table id="mytable" border="1">
+        <thead>
+            <tr>
+                <td> name </td>
+                <td> age </td>
+                <td> roll_no </td>
+            </tr>
+        </thead>
+    </table>
+</body>
+</html>

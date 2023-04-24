@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body{
+            font-family: sans-serif;
+        }
+        th, td{
+            padding: 10px;
+        }
+        label{
+            margin-right: 20px;
+        }
+        .st1{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <video src="" contr></video>
+    <audio src="" autoplay></audio>
+    <form action="" method="post">
+        <table>
+            <tr>
+                <td colspan="2"><h1>Food Preferences - Survey Form</h1></td>
+            </tr>
+            <tr>
+                <td colspan="2"><h5>Please fill out and submit the survey form at the earliest</h5></td>
+            </tr>
+            <hr>
+            <tr>
+            <td>1. Name</td>
+            <td><input type="text" name="user" /></td>
+            </tr>
+            <tr>
+                <td>2. Age</td>
+                <td><input type="text" name="age" min="14" max="100" /></td>
+            </tr>
+            <tr>
+                <td>3. Where do u eat most often</td>
+                <td>
+                    <input type="radio" id="home" name="location" value="home" />
+                    <label for="home"> At Home</label>
+                    <input type="radio" id="school" name="location" value="school" />
+                    <label for="school"> at Work/School</label>
+                    <input type="radio" id="school" name="location" value="restrurant" />
+                    <label for="restrurant"> In a Restrurant</label>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">4. Specify, how often</td>
+            </tr>
+            <br>
+            <table style="font-size: 0.7em; border: 1px solid;">
+                <tr>
+                    <th></th>
+                    <th>every day</th>
+                    <th>a few times a week</th>
+                    <th>once a weak</th>
+                    <th>several times a month</th>
+                    <th>once a month</th>
+                    <th>less often than once a month</th>
+                </tr>
+                <tr>
+                    <td>You prepair your own meal</td>
+                    <td><input type="radio" class="st1" name="prepare_meal" value="every day" /> </td>
+                    <td><input type="radio" class="st1" name="prepare_meal" value="few times a week" /></td>
+                    <td><input type="radio" class="st1" name="prepare_meal" value="once a week" /></td>
+                    <td><input type="radio" class="st1" name="prepare_meal" value="several times a week" /></td>
+                    <td><input type="radio" class="st1" name="prepare_meal" value="once a month" /></td>
+                    <td><input type="radio" class="st1" name="prepare_meal" value="less often once a month" /></td>
+                </tr>
+                <tr>
+                    <td>You eat out</td>
+                    <td><input type="radio" class="st1" name="you eat out" value="every day" /> </td>
+                    <td><input type="radio" class="st1" name="you eat out" value="few times a week" /></td>
+                    <td><input type="radio" class="st1" name="you eat out" value="once a week" /></td>
+                    <td><input type="radio" class="st1" name="you eat out" value="several times a week" /></td>
+                    <td><input type="radio" class="st1" name="you eat out" value="once a month" /></td>
+                    <td><input type="radio" class="st1" name="you eat out" value="less often once a month" /></td>
+                </tr>
+                <tr>
+                    <td>You order food for home</td>
+                    <td><input type="radio" class="st1" name="you order food" value="every day" /> </td>
+                    <td><input type="radio" class="st1" name="you order food" value="few times a week" /></td>
+                    <td><input type="radio" class="st1" name="you order food" value="once a week" /></td>
+                    <td><input type="radio" class="st1" name="you order food" value="several times a week" /></td>
+                    <td><input type="radio" class="st1" name="you order food" value="once a month" /></td>
+                    <td><input type="radio" class="st1" name="you order food" value="less often once a month" /></td>
+                </tr>
+            </table>
+            <br>
+            <tr>
+                <td colspan="2">5. The most often place you visit are restrurant serving food of origin : </td>
+                <td>
+                    <table>
+                        <tr>
+                            <td><input type="checkbox" name="food_type">Polish</td>
+                            <td><input type="checkbox" name="food_type">Italian</td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" name="food_type">Asian</td>
+                            <td><input type="checkbox" name="food_type">American</td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" name="food_type">Indian</td>
+                            <td><input type="checkbox" name="food_type">Spanish</td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" name="food_type">Chinese</td>
+                            <td><input type="checkbox" name="food_type">Other</td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <br>
+            <tr>
+                <td>6. Given an option, would you go Vegan ?</td>
+                <td>
+                    <input type="radio" name="choice" style="margin-left: 100px;">Yes
+                    <input type="radio" name="choice">No
+                </td>
+            </tr>
+            <br><br>
+            <tr>
+                <td> <button type="submit">Submit</button> </td>
+                <td> <button type="reset">Reset</button> </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

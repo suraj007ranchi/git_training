@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var firstArray = [2,7,10,12,42,23]
+        var secondArray = []
+        
+        function copyArray(){
+            let val = parseInt(document.getElementById("myid").value)
+            
+            /* My logic to push same elements from user input into new array
+            for(let i=0;i<firstArray.length;i++){
+                if(val==[firstArray[i]]){
+                    secondArray.push(val)
+                }
+            }
+            */
+            // Sir's Logic for same task. Its simplier than me
+            if(firstArray.includes(val)){
+                secondArray.push(val)
+            }
+            document.getElementById("output1").innerHTML = firstArray.join(',')
+            document.getElementById("output2").innerHTML = secondArray.join(',')
+        }
+        
+    </script>
+</head>
+<body>
+    <label for="myid">Enter no move from 1st to 2nd array if matches with 1st arrya</label>
+    <input type="text" id="myid">
+    <button onclick="copyArray()">Copy</button>
+    firstArray
+    <p id="output1"></p>
+    secondArray
+    <p id="output2"></p>
+</body>
+</html>

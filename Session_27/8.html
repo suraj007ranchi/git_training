@@ -1,0 +1,20 @@
+<html>
+  <head>
+    <title>App</title>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  </head>
+<script>
+     const handleChange = ()=>{
+        axios
+        .get("https://reqres.in/api/users?page=2")
+        .then(res=>JSON.stringify(res))
+        .then(data=> document.getElementById("output").innerHTML = data)
+    }
+     
+</script>
+  <body>
+    <button onclick="handleChange()"> Click to see data</button>
+    <p id="output"></p>
+  </body>
+</html>
+

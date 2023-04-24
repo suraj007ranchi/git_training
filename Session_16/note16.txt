@@ -1,0 +1,74 @@
+JS is programming language.
+
+# Program is made up of input and output.
+# It has few rules.
+# We need variable to store data. 
+
+In JS we create variable using 
+1. Let 		
+2. Var
+3. Const
+
+OPERATORS are used to transform data.
+1. Mathematics operators :-   +,-,*,/,% etc
+2. Relational operators :- used for comparison, output will be true or false.
+	Ex : > , <, >= , <= , == , != 
+3. Assignment operators :   = 
+
+~~ Important ~~
+==  : used to compare values only
+=== : used to compare value as well as data its type
+
+# In any programming language we have to take decision.
+
+  if(condition){
+	// true
+ }
+ else{
+	//false
+ }
+
+
+ if(condition1){
+    //true
+  }
+ else if(condition2){
+	// true
+     }
+ else{
+	// false
+ }
+
+
+# Nested If-else
+ if(condition1){
+     if(condition2){
+
+	}
+     else{
+
+	}
+ }
+
+# LOOP
+ Repeatative Loops are basically used to repeat the steps again and again till a terminating
+ condition.
+
+Two types of loop :- 
+1. while : while(condition){
+		// till condition true, keeps repeating
+	   }
+	   
+2. for   : for loop have 3 parts
+	  - initilization / starting value
+	  - condition 
+	  - increament/decreament
+
+ for(initilization ; condition ; increament / decreament ){
+	// body of loop
+ }
+
+# Functions  
+  They are used to perform repeatative task.
+  Function is a name given to group of statements.
+  Function helps in code reuseability.

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function handleSubmit(){
+                             // this will stop form from submitting
+            let form = document.getElementById("myform")
+            for(let i=0;i<form.elements.length;i++){
+                console.log(form.elements[i].name,form.elements[i].value)
+            }
+            return false
+        }
+    </script>
+    
+</head>
+<body>
+    <form action="select.html" method="get" onsubmit="event.preventDefault(); handleSubmit()" id="myform">
+        <label for="name">1. Name </label>
+        <input type="text" name="name" id="name">
+        <br>
+        <label for="name">2. Age </label>
+        <input type="number" name="age" id="age">
+        <br>
+        <label for="name">3. RollNo </label>
+        <input type="text" name="rollNo" id="rollNo">
+        <br>
+        <label for="gender"> 4. Select gender</label>
+        <input type="radio" value="male" name="gender"> Male
+        <input type="radio" value="female" name="gender"> Female
+        <br>
+        <button type="submit"> Submit </button>
+    </form>
+    
+</body>
+</html>

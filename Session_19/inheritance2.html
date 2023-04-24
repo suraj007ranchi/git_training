@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        class Car{
+            constructor(name,speed,color){
+                this.name = name
+                this.speed = speed
+                this.color = color
+            }
+            drive(){
+                console.log(this.name," Car is running")
+            }
+        }
+        class Sample extends Car{
+            perform(){
+                console.log(this.name," ",this.speed," ",this.color)
+            }
+        }
+        
+        let s1 = new Sample("Ford",320,"red")
+        s1.drive()
+        s1.perform()
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

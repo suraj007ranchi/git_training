@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>HTML DOM Events</h1>
+<h2>The onmouseenter Event</h2>
+
+<img onmouseenter="increase(this)" onmouseleave="decrease(this)" border="0" src="https://t4.ftcdn.net/jpg/01/36/70/67/360_F_136706734_KWhNBhLvY5XTlZVocpxFQK1FfKNOYbMj.jpg" alt="Smiley" width="32" height="32">
+
+<script>
+function increase(x) {
+  x.style.height = "64px";
+  x.style.width = "64px";
+}
+
+function decrease(x) {
+  x.style.height = "32px";
+  x.style.width = "32px";
+}
+</script>
+
+</body>
+</html>

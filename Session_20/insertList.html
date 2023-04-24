@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    <script>
+        function addList(){
+            let val = document.getElementById("inp1").value
+            let list = document.getElementById("mylist")
+            let list_element = document.createElement("li")
+            list_element.innerText = val
+            list.appendChild(list_element)
+        }
+        function addList1(){
+            let val = document.getElementById("inp1").value
+            let list = document.createElement("ol")
+            let list_element = document.createElement("li")
+            list_element.innerText = val
+            list.appendChild(list_element)
+            document.getElementsByTagName("body")[0].appendChild(list)
+        }
+    </script>
+</head>
+<body>
+    <center>Value <input type="text" id="inp1"></center>
+    
+    <div class="row container justify-content-evenly bg-danger">
+        <div class="col-4 align-content-center bg-light">
+            <button onclick="addList()"> Add list items </button>
+            <ol id="mylist"></ol>
+        </div>
+        <div class="col-4 align-content-center bg-body-secondary">
+            <button onclick="addList1()"> Add list1 items </button>
+            <ol id="mylist1"></ol>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+      function handleClick(){
+      let userId = document.getElementById("userId").value
+      let title = document.getElementById("title").value
+      let body = document.getElementById("body").value
+      fetch('https://jsonplaceholder.typicode.com/posts', {
+        method: 'POST',
+        body: JSON.stringify({
+          title: title,
+          body: body,
+          userId: parseInt(userId),
+        }),
+        headers: {
+          'Content-type': 'application/json; charset=UTF-8',
+        },
+      })
+        .then((response) => response.json())
+        .then((json) => document.getElementById("output").innerHTML=JSON.stringify(json));
+      }
+    </script>
+</head>
+<body>
+    <label>Enter user id<input id="userId" type="number"/></label>
+    <label>Enter title <input id="title"/></label>
+    <label>Enter body <input id="body"/></label>
+    <br/>
+    <button onclick="handleClick()">Send</button>
+    <p id="output"></p>
+   
+</body>
+</html>

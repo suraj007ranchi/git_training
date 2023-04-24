@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        class Point{
+            constructor(x,y){
+                this.x = x
+                this.y = y
+            }
+            toString(){
+                console.log("x coordinate is",this.x)
+                console.log("y coordinate is",this.y)
+            }
+        }
+        class Shape{
+            constructor(){
+                this.position = null
+            }
+            addToPlane(x,y){
+                this.position = new Point(x,y)
+            }
+            move(x,y){
+                this.position = new Point(this.position.x+x,this.position.y+y)
+            }
+        }
+        let s1 = new Shape()
+        s1.addToPlane(10,20)
+        s1.position.toString()
+        s1.move(15,35)
+        s1.position.toString()
+
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>

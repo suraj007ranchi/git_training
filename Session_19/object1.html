@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        let student1 = {}
+        student1['name'] = "Suraj"
+        student1['age'] = 26
+        student1['pincode'] = 834001
+        student1['address'] = {HouseNo :154,'flatNo':45,'location':'Ranchi','country':'India'}
+        console.log(student1)
+        console.log(JSON.stringify(student1))
+        student1['study'] = function(){
+            console.log(this.name,"Study in college")       // this.name refers to student object 
+        }
+        student1.study()
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function handle(){
+            let elements = document.getElementsByTagName("p")
+            console.log(elements)
+            Array.from(elements).forEach(element => {
+                alert(element.innerText)
+            });
+        }
+    </script>
+
+</head>
+<body>
+    <p> Para 1 </p>
+    <p> Para 2 </p>
+    <p> Para 3 </p>
+
+    <button onclick="handle()"> Click Here </button>
+</body>
+</html>

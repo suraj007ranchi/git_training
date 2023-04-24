@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        
+        let data = []
+        data.push(56)
+        data.push(71)
+        data.push(45)
+        data.push(71)
+        console.log(data)
+
+        function handleChange(){
+        let n1 = document.getElementById("search").value;
+        let result = ""
+        let found = false
+        
+        for(let i=0;i<data.length;i++){
+            if(n1==data[i])
+            {
+                found = true;
+                result = result + i+"<br/>"
+
+            }
+        }
+        if(found == true){
+            document.getElementById("output").innerHTML = "data found at <br />"+result
+        }
+        else{
+            //console.log("data not found")
+            document.getElementById("output").innerHTML = "data not found at <br />"
+        }
+        }
+        
+    </script>
+</head>
+<body>
+    <label for="search">Search this</label>
+    <input type="number" id="search" onchange="handleChange()"/>
+    <p id="output"></p>
+    
+</body>
+</html>

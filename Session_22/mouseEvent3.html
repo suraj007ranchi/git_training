@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function handleMouseEnter(){
+            console.log("mouse enter called")
+        }
+        function handleMouseOver(){
+            console.log("mouse over called")
+        }
+    </script>
+</head>
+<body>
+    <div onmouseenter="handleMouseEnter()">
+        <div>
+            this is div1
+        </div><br>
+        <div>
+            this is div2
+        </div>
+    </div>
+    <br><br>
+    <div onmouseover="handleMouseOver()">
+        <div>
+            this is div3
+        </div><br>
+        <div>
+            this is div4
+        </div>
+    </div>
+</body>
+</html>

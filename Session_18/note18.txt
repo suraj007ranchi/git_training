@@ -1,0 +1,17 @@
+map 
+filter
+sort
+forEach
+concat
+indexOf()
+splice
+push
+pop
+
+# Sort i
+
+
+
+
+Q2. 
+Q3. 

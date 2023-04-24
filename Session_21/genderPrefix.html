@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 10px;
+      }
+    </style>
+    <script>
+      function change() {
+        let name = document.getElementById("name").value;
+        let m = document.getElementById("male");
+        let f = document.getElementById("female");
+
+        if (m.checked) {
+          document.getElementById("greet").innerText = `Hello Mr. ${name}!`;
+        }
+        if (f.checked) {
+          document.getElementById("greet").innerText = `Hello Miss. ${name}!`;
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <label for="name">Enter your name:</label>
+    <input type="text" id="name" /> <br />
+    <label for="male">Male:</label>
+    <input type="radio" onclick="change()" name="gender" id="male" />
+    <label for="female">Female:</label>
+    <input type="radio" onclick="change()" name="gender" id="female" />
+    <h3 id="greet"></h3>
+  </body>
+</html>

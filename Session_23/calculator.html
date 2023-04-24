@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <script>
+      function add(a, b) {
+        return a + b;
+      }
+      function subs(a, b) {
+        return a - b;
+      }
+      function multi(a, b) {
+        return a * b;
+      }
+      function div(a, b) {
+        return a / b;
+      }
+
+      function wraper(args) {
+        return (a) => (b) => args(a, b);
+      }
+
+      function perform(option) {
+        switch (option) {
+          case 1:
+            console.log(wraper(add)(n1)(n2));
+            break;
+          case 2:
+            console.log(wraper(subs)(n1)(n2));
+            break;
+          case 3:
+            console.log(wraper(multi)(n1)(n2));
+            break;
+          case 4:
+            console.log(wraper(div)(n1)(n2));
+            break;
+          default:
+            console.log("enter currect option");
+        }
+      }
+
+      let option = parseInt(prompt("enter your choice"))
+      console.log("my choice is", option);
+      var n1 = parseInt(prompt("enter 1st no"))
+      var n2 = parseInt(prompt("enter 2st no"))
+      perform(option)
+      
+    </script>
+  </head>
+  <body></body>
+</html>

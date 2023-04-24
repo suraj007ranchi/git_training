@@ -1,0 +1,15 @@
+div {
+    border: 1px solid #b82121;
+    background-color: rgb(182, 219, 14);
+    padding-top: 50px;
+    padding-right: 30px;
+    padding-bottom: 50px;
+    padding-left: 150px;
+    
+    
+  }
+  p{
+    border-left: #b82121 solid;
+    border-right: #b82121 solid;
+    border-radius: 10px;
+  }

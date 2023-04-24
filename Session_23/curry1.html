@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      function curry(f) {                       // curry funtion take another function as an argument.
+        // curry(f) does the currying transform
+        return function (a) {
+          return function (b) {
+            return f(a, b);                     // curry function is also known as wrapper funtion.
+          };
+        };
+      }
+
+      // usage
+      function sum(a, b) {
+        return a + b;
+      }
+
+      let curriedSum = curry(sum);
+
+      alert(curriedSum(1)(2)); // 3
+    </script>
+  </head>
+  <body></body>
+</html>

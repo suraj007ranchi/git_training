@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        class Account{
+            constructor(a_no,a_type,c_name){
+                this.a_no = a_no
+                this.a_type = a_type
+                this.c_name = c_name
+            }
+            display(){
+                console.log(JSON.stringify(this))
+            }
+        }
+        class Saving extends Account{
+            constructor(a_no,c_name,interest){
+                super(a_no,"Saving",c_name)
+                this.interest = interest
+            }
+            interest_rate(){
+                console.log(this.a_type," its ",this.interest)
+            }
+
+        }
+        class Current extends Account{
+            constructor(a_no,c_name,balance){
+                super(a_no,"Current",c_name)
+                this.balance = balance
+            }
+            balance1(){
+                console.log(this.balance," is ur a/c balance")
+            }
+        }
+        
+        let s1 = new Saving(12345645,"Suraj",20)
+        s1.interest_rate()
+        s1.display()
+        let c1 = new Current(78084545,"Sagar",78000)
+        c1.balance1()
+        c1.display()
+
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>

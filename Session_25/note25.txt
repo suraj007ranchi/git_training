@@ -1,0 +1,61 @@
+Template String : It is basically used for concatination and they provide an easy way of combining variables.
+                  For using Template String we make use of special single quote.
+                  Sytax : ``
+
+Few links to practice on JSON data
+https://jsonplaceholder.typicode.com/todos
+https://jsonplaceholder.typicode.com/comments
+
+Web services and remote data
+UI technology them self store data
+
+Browser----------------> Server(UI techology)------>Database
+
+Browser----UI (React)------>Server side(Express)--->Database
+
+Loosely coupled application
+
+Pizza
+
+UI technologies needs to get data from URL
+Javascript provides fetch method for doing the same
+
+fetch(url).
+then(data=>data.json())
+.then(
+
+JSON(Javascript object notation)
+
+{"key1":"value1"}
+
+{"country":"UK"}
+
+{"location":"London street","country":"UK"}
+
+[
+{"location":"London street","country":"UK"},
+{"location":"Taj mahal","country":"IN"}
+]
+
+JSON.parse==It converts String to Javascript object
+JSON.stringify==It convert javascript object to string
+
+In javascript you can get indiviual data and properties using following syntax
+
+    <title>Document</title>
+    <script>
+     let data = {id:1,name:"hello"}
+     for (let property in data){
+      console.log(property,data[property])
+     }
+    </script>
+	
+	
+	GET: data is passed in  url
+	/getbyid?id=10
+	
+	POST --creating/inserting--data is passed in body
+	/
+	PUT updating
+	
+	DELETE deleting data

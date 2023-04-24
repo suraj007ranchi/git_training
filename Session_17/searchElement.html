@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        let data = []
+        data.push(56)
+        data.push(71)
+        data.push(45)
+        data.push(71)
+        console.log(data)
+        let n1 = 71;
+        let found = false
+        
+        for(let i=0;i<data.length;i++){
+            if(n1==data[i])
+            {
+                found = true;
+                console.log(i)
+            }
+        }
+        if(found == true){
+            console.log("data found")
+        }
+        else{
+            console.log("data not found")
+        }
+    </script>
+</head>
+<body>
+    <label for="search">Search this</label>
+    <input type="number" id="search" />
+</body>
+</html>

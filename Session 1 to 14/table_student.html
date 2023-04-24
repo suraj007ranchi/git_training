@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            This is my 1st page
+        </title>
+        <script>
+            function TransferData(){
+                let t = document.getElementById("table1"),
+                    d = t.getElementsByTagName("tr"),
+                    i = d.getElementsByTagName("td");
+                document.getElementById("para").innerHTML=i;
+            }
+        </script>
+    </head>
+    <body>
+        <table id="table1" border="1px solid green">
+            <thead> StudentTable </thead>
+            <tr>
+                <th> Name </th>
+                <th> Age </th>
+                <th> Marks </th>
+            </tr>
+            <tr>
+                <td> Suraj </td>
+                <td> 28 </td>
+                <td> 91 % </td>
+            </tr>
+            <tr>
+                <td> Samir </td>
+                <td> 27 </td>
+                <td> 88 % </td>
+            </tr>
+            <tr>
+                <td> Kunla </td>
+                <td> 29 </td>
+                <td> 90 % </td>
+            </tr>
+            <tr>
+                <td> Peter </td>
+                <td> 27 </td>
+                <td> 78 % </td>
+            </tr>
+        </table>
+    </body>
+    <p id="para"></p>
+    <button onclick="TransferData()">Click here</button>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Handle Click</title>
+    <script>
+      function alertCall(){
+        alert("We r in alert call after handleClick")
+      }
+      function handleClick() {
+        setTimeout(alertCall,10000)
+        setTimeout()
+      }
+    </script>
+  </head>
+  <body>
+    <button id="btn1" onclick="handleClick()">Delayed Click</button>
+  </body>
+</html>
